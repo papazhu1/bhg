@@ -32,7 +32,7 @@ func main() {
 	)
 
 	// Create buffer to hold input/output.
-	input := make([]byte, 4096)
+	input := make([]byte, 120)
 
 	// Use reader to read input.
 	s, err := reader.Read(input)

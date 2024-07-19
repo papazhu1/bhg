@@ -13,7 +13,7 @@ type Status struct {
 
 func main() {
 	res, err := http.Post(
-		"http://127.0.0.1:3790/import",
+		"http://127.0.0.1:8080",
 		"application/json",
 		nil,
 	)

@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"net/url"
@@ -11,22 +10,22 @@ import (
 
 func main() {
 
-	resp, err := http.Get("https://www.google.com/robots.txt")
-	if err != nil {
-		log.Panicln(err)
-	}
-	// Print HTTP Status
-	fmt.Println(resp.Status)
+	//resp, err := http.Get("https://www.google.com/robots.txt")
+	//if err != nil {
+	//	log.Panicln(err)
+	//}
+	//// Print HTTP Status
+	//fmt.Println(resp.Status)
+	//
+	//// Read and display response body
+	//body, err := ioutil.ReadAll(resp.Body)
+	//if err != nil {
+	//	log.Panicln(err)
+	//}
+	//fmt.Println(string(body))
+	//resp.Body.Close()
 
-	// Read and display response body
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		log.Panicln(err)
-	}
-	fmt.Println(string(body))
-	resp.Body.Close()
-
-	resp, err = http.Head("https://www.google.com/robots.txt")
+	resp, err := http.Head("https://www.google.com/robots.txt")
 	if err != nil {
 		log.Panicln(err)
 	}
